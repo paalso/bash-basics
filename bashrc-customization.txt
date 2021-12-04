@@ -1,0 +1,27 @@
+PS1="\[\e]0; \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\[\033[00m\]\[\033[01;34m\]\w\[\033[00m\]\$ "
+
+# Some aliases
+alias l="ls -1lh --group-directories-first"
+alias la="ls -1lah --group-directories-first"
+alias md=mkdir
+alias cls=clear
+alias weather='curl -3 wttr.in/Kharkov'
+alias na="nano -u"
+
+alias python3='/usr/bin/python3.8'
+alias p3=python3
+
+# git aliases
+alias gh='git hist'
+alias gs='git status '
+alias ga='git add '
+alias gb='git branch '
+alias gc='git commit'
+alias gd='git diff'
+alias gco='git checkout '
+alias gcm='git checkout master'
+alias gk='gitk --all&'
+alias gx='gitx --all'
+alias gp='git pull --rebase'
+
+
