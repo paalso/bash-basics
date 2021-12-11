@@ -4,7 +4,7 @@
 
 if [[ $# -ne 2 ]]
 then
-  echo "Usage: type(f for file, d for dir) pathname"
+  echo "Usage: $0 type(f for file, d for dir) pathname"
   exit 1
 fi
 

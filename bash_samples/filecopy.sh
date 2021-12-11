@@ -5,7 +5,7 @@
 
 if [[ $# -ne 2 ]]
 then
-  echo "Usage: file-copy-from file-copy-to"
+  echo "Usage: $0 file-copy-from file-copy-to"
   exit 1
 fi
 
