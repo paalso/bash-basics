@@ -22,19 +22,16 @@ function print_group_by_age()
   fi
 }
 
-while [[ 1 ]]
-do
+while :; do
   echo "enter your name:"
   read name
-  if [[ -z $name ]]
-  then
+  if [[ -z $name ]]; then
     break
   fi
 
   echo "enter your age:"
   read age
-    if [[ $age -eq 0 ]]
-  then
+    if [[ $age -eq 0 ]]; then
     break
   fi
 

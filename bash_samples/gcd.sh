@@ -10,20 +10,19 @@ function gcd()
 {
   r=$(($1 % $2))
   if [[ $r -eq 0 ]]; then
-    echo "GCD is $2"
-    # exit 0  
-  else
-    gcd $2 $r
-  fi   
+    return $2
+  fi
+  return $(gcd $2 $r)
 }
 
 
-while [[ 1 ]]; do
+while :; do
   read m n
   if [[ -z $m ]]; then
     echo bye
     exit 0
   else
     gcd $m $n
+    echo "GCD is $?"
   fi
 done
