@@ -7,7 +7,7 @@ Make the script executable
 
 Add to `.bashrc` line
 
-`export PATH="$HOME/bin:$PATH"`
+`export PATH="$HOME/scripts:$PATH"`
 
 Add aliases like
 

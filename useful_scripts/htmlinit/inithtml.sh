@@ -26,7 +26,7 @@ create_default_structure() {
 
 # Function to create the Hexlet project structure
 create_hexlet_structure() {
-    mkdir -p "$1/styles" "$1/img"
+    mkdir -p "$1/styles" "$1/assets" "$1/assets/fonts"
     echo "body {
   margin: 0;
 }" > "$1/styles/app.css"
@@ -49,7 +49,15 @@ create_hexlet_structure() {
 
 # Check if -h or --hexlet argument is present
 if [[ $1 = "-h" ]] || [[ $1 = "--hexlet" ]]; then
-    create_hexlet_structure "$2"
+    if [[ -z $2 ]]; then
+        echo "No project name. Cannot create the structure"
+        exit 1
+    else
+        create_hexlet_structure "$2"
+    fi
+elif [[ -z $1 ]]; then
+    echo "No project name. Cannot create the structure"
+    exit 1
 else
     create_default_structure "$1"
 fi
